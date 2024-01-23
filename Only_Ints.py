@@ -5,7 +5,9 @@
 #while calling only_ints("a", 1) should return False.
 
 def only_ints(one, two):
-    return True if isinstance(one, int) and isinstance(two, int) else False
+    # return True if isinstance(one, int) and isinstance(two, int) else False
+    return True if type(one) == int and type(two) == int else False
 
 print(only_ints(1, 3)) # True
 print(only_ints("a", 3)) # False
+print(only_ints(3, False)) # False
